@@ -1,6 +1,6 @@
 = prawnlabels
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/sunfield/prawnlabels
 
 == DESCRIPTION:
 
@@ -18,9 +18,7 @@ of a label as defined by the Template.
 == SYNOPSIS:
 
   require 'prawnlabels'
-  # Note the API for getting pre-defined templates is due to change
-  # very shortly.
-  g = PrawnLabels::Generator.new(PrawnLabels::Template.avery_7160)
+  g = PrawnLabels::Generator.new(PrawnLabels::Templates.get('Avery', '7160'))
   # Fill a 21-label sheet with the same address
   21.times do
     g.add_label do |pdf|

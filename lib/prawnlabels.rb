@@ -18,5 +18,5 @@ require 'prawnlabels/templates'
 # Consider checking this before filing a bug saying the layout is wrong, or before fiddling with the templates!
 
 module PrawnLabels
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
 end
