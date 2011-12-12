@@ -4,6 +4,7 @@ PostInstall.txt
 README.rdoc
 Rakefile
 lib/prawnlabels.rb
+lib/prawnlabels/generate.rb
 script/console
 script/destroy
 script/generate

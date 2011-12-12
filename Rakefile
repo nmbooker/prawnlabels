@@ -12,6 +12,7 @@ Hoe.plugin :newgem
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
 $hoe = Hoe.spec 'prawnlabels' do
   self.developer 'Nick Booker', 'nick@sunfieldtech.net'
+  self.summary = 'Print labels and business cards from Ruby programs'
   self.post_install_message = 'PostInstall.txt' # TODO remove if post-install message not required
   self.rubyforge_name       = self.name # TODO this is default value
   self.extra_deps         = [['prawn','>= 0.12.0']]

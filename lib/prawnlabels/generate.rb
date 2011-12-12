@@ -1,7 +1,24 @@
 require 'prawn'
 
+# Label printing library based on Prawn.
+# See the module 'PrawnLabels' and its classes for further documentation.
+
+# Label printing library based on Prawn.
+# The Template and Layout classes define how the labels are laid out on the page.
+# The Generator class uses a Template to render your text on the labels.
+#
+# This is really important:
+# Your PDF viewer and printer driver must be configured to avoid fitting the contents to
+# printable margins.  If any scaling is done, the layout will be wrong on the page.
+# Consider checking this before filing a bug saying the layout is wrong, or before fiddling with the templates!
 module PrawnLabels
   # Specifies the label format and how they're laid out on the page.
+  # width: The width of each label.
+  # height: The height of each label.
+  # round: The radius of rounded corners on the labels.
+  # markup_margin_size: The size of the margin within the label.
+  # layout: A Layout object, that describes how labels are laid out on the page.
+  # page_size: The size of each sheet of labels.  Either a valid pre-defined Prawn page size, or [width, height].
   class Template
     attr_accessor :width, :height, :round, :markup_margin_size, :layout, :page_size
     def initialize(params)
@@ -11,6 +28,20 @@ module PrawnLabels
       @round = params[:round]
       @markup_margin_size = params[:markup_margin_size]
       @layout = params[:layout]
+    end
+
+
+    def self.avery_7160
+      Template.new(
+        page_size: 'A4',
+        width: 181.4, height: 108.0, round: 5,
+        markup_margin_size: 5,
+        layout: Layout.new(
+          nx: 3, ny: 7,
+          x0: 21.2, y0: 43.9,
+          dx: 187.2, dy: 108.0
+        )
+      )
     end
   end
 
@@ -36,8 +67,8 @@ module PrawnLabels
 
 
   class Generator
-    def initialize
-      @template = Template.new(
+    def initialize(template=nil)
+      @template ||= Template.new(
         page_size: 'A4',
         width: 181.4, height: 108.0, round: 5,
         markup_margin_size: 5,
