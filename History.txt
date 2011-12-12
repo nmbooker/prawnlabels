@@ -8,3 +8,8 @@
 * 2 major enhancements:
   * Split the code up into individual files generate.rb, template.rb and templates.rb
   * Generalised the API for getting pre-defined templates.  Old code will no longer work!
+
+=== 0.0.3 2011-12-12
+
+* 1 major enhancement:
+  * Improved documentation of pre-defined Templates API.
