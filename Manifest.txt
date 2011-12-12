@@ -5,6 +5,7 @@ README.rdoc
 Rakefile
 lib/prawnlabels.rb
 lib/prawnlabels/generate.rb
+lib/prawnlabels/template.rb
 script/console
 script/destroy
 script/generate
