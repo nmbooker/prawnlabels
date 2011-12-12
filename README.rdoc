@@ -38,8 +38,7 @@ of a label as defined by the Template.
 
 == INSTALL:
 
-* rake gem
-* gem install pkg/prawnlabels-VERSION.gem
+* rake install_gem
 
 == LICENSE:
 
