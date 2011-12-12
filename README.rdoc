@@ -4,15 +4,35 @@
 
 == DESCRIPTION:
 
-FIX (describe your package)
+PrawnLabels is designed to produce sheets of labels in PDF format.
+You set up your label Template (probably just copying some parameters from
+a glabels template), create a Generator and add labels to it.  Each
+label can contain anything you like as long as it fits within the confines
+of a label as defined by the Template.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* It's currently hard to specify a template, and there's only one template included and that's hard-coded.  Ideally we want to get to a point where it can read templates from glabels which has an extensive list already defined.
+* The API isn't currently set in stone, and the file layout definitely isn't!
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  require 'prawnlabels/generate'
+  # Note the API for getting pre-defined templates is due to change
+  # very shortly.
+  g = PrawnLabels::Generator.new(PrawnLabels::Template.avery_7160)
+  # Fill a 21-label sheet with the same address
+  21.times do
+    g.add_label do |pdf|
+      pdf.text("10 Hello world")
+      pdf.text("District")
+      pdf.text("Town")
+      pdf.text("County")
+      pdf.text("Postcode")
+      pdf.text("Country")
+    end
+  end
+  g.render_file("test.pdf")
 
 == REQUIREMENTS:
 
@@ -20,13 +40,14 @@ FIX (describe your package)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* rake gem
+* gem install pkg/prawnlabels-VERSION.gem
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2011 FIXME full name
+Copyright (c) 2011 Nick Booker <NMBooker@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
