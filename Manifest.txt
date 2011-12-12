@@ -6,6 +6,7 @@ Rakefile
 lib/prawnlabels.rb
 lib/prawnlabels/generate.rb
 lib/prawnlabels/template.rb
+lib/prawnlabels/templates.rb
 script/console
 script/destroy
 script/generate

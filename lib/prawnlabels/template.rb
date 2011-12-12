@@ -16,20 +16,6 @@ module PrawnLabels
       @markup_margin_size = params[:markup_margin_size]
       @layout = params[:layout]
     end
-
-
-    def self.avery_7160
-      Template.new(
-        page_size: 'A4',
-        width: 181.4, height: 108.0, round: 5,
-        markup_margin_size: 5,
-        layout: Layout.new(
-          nx: 3, ny: 7,
-          x0: 21.2, y0: 43.9,
-          dx: 187.2, dy: 108.0
-        )
-      )
-    end
   end
 
   # Specifies how labels are laid out on a page.  Units are in points.

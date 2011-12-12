@@ -6,6 +6,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 
 require 'prawnlabels/generate'
 require 'prawnlabels/template'
+require 'prawnlabels/templates'
 
 # Label printing library based on Prawn.
 # The Template and Layout classes define how the labels are laid out on the page.
