@@ -39,7 +39,11 @@ of a label as defined by the Template.
 
 == INSTALL:
 
+From downloaded repository:
 * rake install_gem
+
+Or you can download a gem from the downloads page and install it with, for example:
+* gem install prawnlabels-0.0.3.gem
 
 == LICENSE:
 
