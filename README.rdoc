@@ -34,7 +34,8 @@ of a label as defined by the Template.
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* Ruby 1.9
+* prawn (and its dependencies)
 
 == INSTALL:
 
