@@ -23,7 +23,7 @@ module PrawnLabels
       @pdf.render_file(filename)
     end
 
-    # add_label do |pdf, generator|
+    # add_label do |pdf|
     #   pdf.text("Hello")
     # end
     def add_label(&block)
