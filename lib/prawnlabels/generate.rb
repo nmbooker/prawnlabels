@@ -15,10 +15,12 @@ module PrawnLabels
       @this_y = 0
     end
 
+    # return rendered PDF as a string
     def render
       @pdf.render
     end
 
+    # save rendered PDF in a file of given name
     def render_file(filename)
       @pdf.render_file(filename)
     end
@@ -37,6 +39,7 @@ module PrawnLabels
       end
     end
 
+    # return the PrawnLabels::Layout information from the template
     def layout
       @template.layout
     end
