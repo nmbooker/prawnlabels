@@ -1,6 +1,6 @@
 = prawnlabels
 
-* http://github.com/sunfield/prawnlabels
+* http://github.com/nmbooker/prawnlabels
 
 == DESCRIPTION:
 
